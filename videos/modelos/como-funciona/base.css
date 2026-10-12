@@ -1,0 +1,8 @@
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--red:#F83E3E;--ink:#1A1A1A}
+body{font-family:'Inter Display','Inter',sans-serif;-webkit-font-smoothing:antialiased}
+.white-logo{filter:brightness(0) invert(1)}
+/* marca d'água padrão: sempre canto superior direito */
+.wm{position:absolute;right:100px;width:150px;opacity:.6;z-index:5}
+body.feed .wm{top:100px}
+body.story .wm{top:270px}
