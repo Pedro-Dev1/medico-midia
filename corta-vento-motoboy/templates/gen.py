@@ -17,6 +17,7 @@ LOGO_VB = (170, 106, 682, 811)  # x, y, w, h
 LOGO_RATIO = LOGO_VB[2] / LOGO_VB[3]
 _logo_src = open(os.path.join(D, 'logo-tpl.svg')).read()
 _logo_inner = re.search(r'<svg[^>]*>(.*)</svg>', _logo_src, re.S).group(1)
+_logo_inner = re.sub(r'<metadata>.*?</metadata>', '', _logo_inner, flags=re.S)
 _uid = [0]
 
 def logo(x, y, h, color):
